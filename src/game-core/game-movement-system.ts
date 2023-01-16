@@ -7,3 +7,8 @@
     be instantly placed at its target destination and the
     requested object will begin to move.
 */
+
+@Component("GameMovementSystem")
+export class GameMovementSystem implements ISystem {
+    
+}
