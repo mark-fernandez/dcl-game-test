@@ -5,3 +5,8 @@ bin
 *.*~
 export
 
+/node_modules
+npm-debug.log
+.DS_Store
+/*.env
+bin
