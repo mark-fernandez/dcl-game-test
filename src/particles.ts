@@ -32,38 +32,38 @@ export class ParticleSystem {
   }
 }
 
-// Setup particles
-const particles: Entity[] = []
-const shape = new PlaneShape()
-const material = new Material()
-material.metallic = 1
-material.albedoColor = new Color3(0.5, 1.5, 2)
-material.emissiveColor = new Color3(0.5, 1.5, 2)
+// // Setup particles
+// const particles: Entity[] = []
+// const shape = new PlaneShape()
+// const material = new Material()
+// material.metallic = 1
+// material.albedoColor = new Color3(0.5, 1.5, 2)
+// material.emissiveColor = new Color3(0.5, 1.5, 2)
 
-// Position particles with a
-const particleTransform = new Entity()
-particleTransform.addComponent(
-  new Transform({
-    position: new Vector3(16, 0, 10),
-    rotation: Quaternion.Euler(0, 90, 0)
-  })
-)
-engine.addEntity(particleTransform)
+// // Position particles with a
+// const particleTransform = new Entity()
+// particleTransform.addComponent(
+//   new Transform({
+//     position: new Vector3(16, 0, 10),
+//     rotation: Quaternion.Euler(0, 90, 0)
+//   })
+// )
+// engine.addEntity(particleTransform)
 
-// Initialise particles
-const MAX_PARTICLES = 256
+// // Initialise particles
+// const MAX_PARTICLES = 256
 
-for (let i = 0; i < MAX_PARTICLES; i++) {
-  const particle = new Entity()
-  particle.addComponent(shape)
-  particle.addComponent(material)
-  particle.addComponent(new Particle(16, 7, 0.25, particleTransform))
-  particle.addComponent(
-    new Transform({
-      rotation: Quaternion.Euler(0, 90, 0),
-      scale: new Vector3(0.01, 0.1, 1)
-    })
-  )
-  engine.addEntity(particle)
-  particles.push(particle)
-}
+// for (let i = 0; i < MAX_PARTICLES; i++) {
+//   const particle = new Entity()
+//   particle.addComponent(shape)
+//   particle.addComponent(material)
+//   particle.addComponent(new Particle(16, 7, 0.25, particleTransform))
+//   particle.addComponent(
+//     new Transform({
+//       rotation: Quaternion.Euler(0, 90, 0),
+//       scale: new Vector3(0.01, 0.1, 1)
+//     })
+//   )
+//   engine.addEntity(particle)
+//   particles.push(particle)
+// }
